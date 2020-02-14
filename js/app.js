@@ -21,12 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', handleFormSubmit);
 
 
-  const handleDeleteAllButtonClick = function(){
-      const holidayList = document.querySelector('#holiday-list');
-      while (holidayList.firstChild) holidayList.removeChild(holidayList.firstChild);
-    }
-    
-    const button = document.querySelector('#deleteAll');
-    button.addEventListener('click', handleDeleteAllButtonClick);
+  const handleDeleteAllClick = function(){
+    const holidayList = document.querySelector('#holiday-list');
+    while (holidayList.firstChild) holidayList.removeChild(holidayList.firstChild);
+  }
+
+  const newButton = document.createElement('button');
+  document.querySelector('new-item-form');
+  newButton.textContent = "delete all holidays!";
+  newButton.setAttribute('id', 'delete-all');
+  const body = document.querySelector('body');
+  body.appendChild(newButton);
+
+  const deleteAllButton = document.querySelector('#delete-all');
+  deleteAllButton.addEventListener('click', handleDeleteAllClick);
 
 })
