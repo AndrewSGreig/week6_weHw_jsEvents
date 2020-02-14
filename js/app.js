@@ -21,4 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', handleFormSubmit);
 
 
+  const handleDeleteAllButtonClick = function(){
+      const holidayList = document.querySelector('#holiday-list');
+      while (holidayList.firstChild) holidayList.removeChild(holidayList.firstChild);
+    }
+    
+    const button = document.querySelector('#deleteAll');
+    button.addEventListener('click', handleDeleteAllButtonClick);
+
 })
