@@ -1,5 +1,13 @@
+h1{
+  background-color: lavender;
+}
+
 body {
   font-family: Palatino;
+}
+
+form {
+  background-color: lightskyblue;
 }
 
 #holiday-list {
@@ -11,5 +19,5 @@ body {
 #holiday-list li{
   list-style: circle;
   padding: 12px;
-  background-color: #ccc;
+  background-color: powderblue	;
 }
